@@ -1,1 +1,66 @@
-# Asymmetric Lattice Formation in Quadcopter SwarmsThis project implements lattice flocking for a swarm of quadcopter with asymmetric lattice parameters and visibility constraints.# MethodologyThis work expands on the lattice formation work of Olfati-Saber (2006) by loosening the assumption that all agents share common lattice parameters. We develop a novel consensus-based approach for agents to negotiate these parameters locally.In addition to having a minimum visibility radius for detecting nearby neighbours (as in previous work), we further constrain the agent visibility to a field of view parameter (representing the area captured by an onboard camera). We formulate the swarm as a set of directional graph components that automatically assembly using pinning control. Pins are selected to maximize out-degree centrality. The swarming techniques above are all implemented as high-level trajectory planners, assuming underlying double integrator dynamics. This resultant command signals, which take the form of accelerations in Cartesian space, are then converted into velocity setpoints for the quadcopters.The quadcopters make use of 3 nested control loops (translational velocity, angular position, and angular velocity) to track the desired trajectory.# DemonstrationsVideo of autonomous lattice formation using pinning control. Pins are shown in <span style="color:red"> red </span> and are recalculated for maximum out-degree centrality as the structure evolves.<p float="center">    <img src="./Figs_visible/animation3D_quad_10_dir_heter.gif" width="60%"></p># References 1. Reza Olfati-Saber, ["Flocking for Multi-Agent Dynamic Systems: Algorithms and Theory"](https://ieeexplore.ieee.org/document/1605401), *IEEE Transactions on Automatic Control*, Vol. 51 (3), 2006.2. [swarming quadcopter](https://github.com/tjards/swarming_quadcopter).# CitingThe code is opensource but, if you reference this work in your own reserach, please cite me. I have provided an example bibtex citation below:`@techreport{Jardine-2024,  title={Asymmetric Lattice Formation in Quadcopter Swarms},  author={Jardine, P.T.},  year={2024},  institution={Royal Military College of Canada, Kingston, Ontario},  type={GitHub Repository},}`Alternatively, you can cite any of my related papers, which are listed in [Google Scholar](https://scholar.google.com/citations?hl=en&user=RGlv4ZUAAAAJ&view_op=list_works&sortby=pubdate). 
+Note: Superceded. Integrated into larger project (here)[https://github.com/tjards/multi-agent_sim].
+
+# Asymmetric Lattice Formation in Quadcopter Swarms
+
+This project implements lattice flocking for a swarm of quadcopter with asymmetric lattice parameters and visibility constraints.
+
+# Methodology
+
+This work expands on the lattice formation work of Olfati-Saber (2006) by loosening the assumption that all agents share common lattice parameters. 
+We develop a novel consensus-based approach for agents to negotiate these parameters locally.
+
+In addition to having a minimum visibility radius for detecting nearby neighbours (as in previous work), we further constrain the agent visibility 
+to a field of view parameter (representing the area captured by an onboard camera). 
+
+We formulate the swarm as a set of directional graph components that automatically assembly using pinning control. 
+Pins are selected to maximize out-degree centrality. 
+
+The swarming techniques above are all implemented as high-level trajectory planners, assuming underlying double integrator dynamics. 
+This resultant command signals, which take the form of accelerations in Cartesian space, are then converted into velocity setpoints for the quadcopters.
+The quadcopters make use of 3 nested control loops (translational velocity, angular position, and angular velocity) to track the desired trajectory.
+
+# Demonstrations
+
+Video of autonomous lattice formation using pinning control. 
+Pins are shown in <span style="color:red"> red </span> and are recalculated for maximum out-degree centrality as the structure evolves.
+
+<p float="center">
+    <img src="./Figs_visible/animation3D_quad_10_dir_heter.gif" width="60%">
+</p>
+
+# References 
+
+1. Reza Olfati-Saber, ["Flocking for Multi-Agent Dynamic Systems: Algorithms and Theory"](https://ieeexplore.ieee.org/document/1605401), *IEEE Transactions on Automatic Control*, 
+Vol. 51 (3), 2006.
+2. [swarming quadcopter](https://github.com/tjards/swarming_quadcopter).
+
+# Citing
+
+The code is opensource but, if you reference this work in your own reserach, please cite me. I have provided an example bibtex citation below:
+
+`@techreport{Jardine-2024,
+  title={Asymmetric Lattice Formation in Quadcopter Swarms},
+  author={Jardine, P.T.},
+  year={2024},
+  institution={Royal Military College of Canada, Kingston, Ontario},
+  type={GitHub Repository},
+}`
+
+Alternatively, you can cite any of my related papers, which are listed in [Google Scholar](https://scholar.google.com/citations?hl=en&user=RGlv4ZUAAAAJ&view_op=list_works&sortby=pubdate).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
