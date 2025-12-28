@@ -1,4 +1,4 @@
-Note: Superceded. Integrated into larger project (here)[https://github.com/tjards/multi-agent_sim].
+Note: Superseded Integrated into larger project (here)[https://github.com/tjards/multi-agent_sim].
 
 # Asymmetric Lattice Formation in Quadcopter Swarms
 
